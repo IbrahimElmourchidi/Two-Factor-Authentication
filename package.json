@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-session": "^2.0.44",
+    "bcrypt": "^5.1.0",
+    "cookie-session": "^2.0.0"
+  }
+}
