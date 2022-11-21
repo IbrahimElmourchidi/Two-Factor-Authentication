@@ -8,9 +8,16 @@ import { from } from 'rxjs';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.use(cookieSession({
-    keys:['secret']
-  }))
+  app.use(
+    cookieSession({
+      keys: ['secret'],
+    }),
+  );
+  app.enableCors({
+    origin: 'http://localhost:4200',
+    credentials: true,
+  });
+
   const port = process.env.PORT || 5000;
   await app.listen(port, () => console.log(`listening on port ${port}`));
 }

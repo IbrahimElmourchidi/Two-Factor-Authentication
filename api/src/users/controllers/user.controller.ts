@@ -26,8 +26,6 @@ export class UserController {
 
   @Get()
   async findAll(@Query('email') email: string) {
-    console.log(email);
-
     return this.userService.find(email);
   }
 

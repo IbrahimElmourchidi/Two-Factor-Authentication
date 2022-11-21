@@ -5,4 +5,6 @@ export class UserSerializeDto {
   id: number;
   @Expose()
   email: string;
+  @Expose()
+  multiFactor: boolean;
 }
